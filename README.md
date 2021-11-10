@@ -7,15 +7,17 @@ However, the goal can be randomly located in any of the cells in top-right quart
 
 ### Q-learning
 ![](images/qlearning.png)
-In the current setup,
-Reward for goal: 100
-Reward for non-goal: -0.1
+In the current setup,    
+Reward for goal: 100    
+Reward for non-goal: -0.1    
 (Can be changed in `_build_rewards` function.)
 
 ### Setup
 Please clone this repo and run using the following script: \
-`pip install -r requirements.txt`
-`python src/code.py`
+```
+pip3 install -r requirements.txt
+python3 src/code.py
+```
 
 For assignment specific outputs like Path costs, optimal path and knwoledge base, please refer [reports.log](logs/reports.log).  
 
@@ -25,18 +27,16 @@ A saved model of Knowledge base is available and can be accessed by Turning `LOA
 ### Slow Transitions
 Please uncomment `self.window.after(DELAY)` on line 223 in [code.py](src/code.py)
 
-Please refer [M20CS064_Report](M20CS064_Report.pdf) for implementation details.
-
 ### Results
-Snapshots:
+Snapshots:    
 ![Agent_Moving](results/Agent_moving_1.png)
 ![Agent_Moving](results/Agent_moving_2.png)
 
-Final learnings of the agent after all epochs:
+Final learnings of the agent after all epochs:    
 ![Learnings](results/learned_paths.png)
 
-Agent states for specific episodes are printed in the following format:
-`[episode 1/500] eps = 0.990 -> iter = 90, rew = 91.1`
+Agent states for specific episodes are printed in the following format:    
+`[episode 1/500] eps = 0.990 -> iter = 90, rew = 91.1`    
 where eps is the exploration parameter (the ratio of agent exploring new path instead of going along previous learned path), iter is the number of iterations, rew is the total reward for the current episode. 
 
 ### TO DO
@@ -44,6 +44,6 @@ where eps is the exploration parameter (the ratio of agent exploring new path in
 * Please feel free to contribute any other changes.  
   
 ### References
-I have built upon these repositories. 
+I have built upon these repositories.
 1. https://github.com/ankonzoid/LearningX/tree/master/classical_RL/gridworld
 2. https://github.com/aqeelanwar/Snake-And-Apple
